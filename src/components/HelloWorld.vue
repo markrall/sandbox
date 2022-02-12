@@ -1,9 +1,16 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
+import BaseButton from './BaseButton.vue'
 
 defineProps<{ msg: string }>()
 
-const count = ref(0)
+let count = ref(0)
+
+const buttonText = computed(() => `count is: ${count.value}`)
+
+function increment() {
+  count.value++
+}
 </script>
 
 <template>
@@ -26,7 +33,7 @@ const count = ref(0)
     <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Docs</a>
   </p>
 
-  <button type="button" @click="count++">count is: {{ count }}</button>
+  <base-button :text="buttonText" :onclick="increment"></base-button>
   <p>
     Edit
     <code>components/HelloWorld.vue</code> to test hot module replacement.
