@@ -1,5 +1,5 @@
 {
-  "projectName": "sandboxVue",
+  "projectName": "sandbox",
   "version": "3.1",
   "frontend": "javascript",
   "javascript": {
@@ -8,7 +8,7 @@
       "SourceDir": "src",
       "DistributionDir": "dist",
       "BuildCommand": "npm run build",
-      "StartCommand": "npm run dev"
+      "StartCommand": "npm run preview"
     }
   },
   "providers": [
